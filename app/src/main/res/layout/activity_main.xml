@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Bienvenido"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Formulario" />
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre" />
+    <EditText
+        android:id="@+id/apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos" />
+    <EditText
+        android:id="@+id/edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad" />
+    <EditText
+        android:id="@+id/peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Peso" />
+    <EditText
+        android:id="@+id/altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Altura" />
+    <Button
+        android:id="@+id/boton_metabolismo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Metabolismo basal" />
+    <Button
+        android:id="@+id/boton_imc"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="IMC" />
+</LinearLayout>
