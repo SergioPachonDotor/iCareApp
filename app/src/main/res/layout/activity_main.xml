@@ -9,49 +9,75 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textFontWeight="@android:integer/config_mediumAnimTime"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:hint="Bienvenido"
 
         />
-    <EditText
+    <TextView
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Formulario" />
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Por favor registra tus datos" />
+
     <EditText
         android:id="@+id/nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:hint="Nombre" />
     <EditText
         android:id="@+id/apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apellidos" />
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="@string/apellidos" />
     <EditText
         android:id="@+id/edad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:hint="Edad" />
     <EditText
         android:id="@+id/peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:hint="Peso" />
     <EditText
         android:id="@+id/altura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:hint="Altura" />
     <Button
         android:id="@+id/boton_metabolismo"
         android:layout_width="200dp"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="center"
+
         android:text="Metabolismo basal" />
     <Button
         android:id="@+id/boton_imc"
         android:layout_width="200dp"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="center"
         android:text="IMC" />
 </LinearLayout>
