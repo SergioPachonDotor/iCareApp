@@ -1,4 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">iCareApp</string>
-    <string name="apellidos">Apellidos</string>
+    <string name="apellidos" translatable="false">Apellidos</string>
+    <string name="feedbacktype1" translatable="false">Masculino</string>
+    <string name="feedbacktype2" translatable="false">Femenino</string>
+    <string name="feedbacktype" translatable="false">Seleccionar Genero</string>
 </resources>

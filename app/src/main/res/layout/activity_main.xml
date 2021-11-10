@@ -17,7 +17,6 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:hint="Bienvenido"
-
         />
     <TextView
 
@@ -37,6 +36,7 @@
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="Nombre" />
+
     <EditText
         android:id="@+id/apellido"
         android:layout_width="match_parent"
@@ -44,40 +44,46 @@
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="@string/apellidos" />
+
     <EditText
         android:id="@+id/edad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:hint="Edad" />
+        android:hint="Edad (años)"/>
+
     <EditText
         android:id="@+id/peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:hint="Peso" />
+        android:hint="Peso (Kg)" />
+
     <EditText
         android:id="@+id/altura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:hint="Altura" />
-    <Button
-        android:id="@+id/boton_metabolismo"
-        android:layout_width="200dp"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:hint="Altura (m)" />
 
-        android:text="Metabolismo basal" />
+    <Spinner
+        android:id="@+id/SpinnerFeedbackType"
+        android:layout_height="wrap_content"
+        android:prompt="@string/feedbacktype"
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        android:entries="@array/feedbacktypelist"
+        android:fontFamily="sans-serif-smallcaps"/>
     <Button
-        android:id="@+id/boton_imc"
+        android:id="@+id/boton_calculo"
         android:layout_width="200dp"
         android:layout_margin="10dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="IMC" />
+        android:text="Realizar Cálculo"
+        />
+
 </LinearLayout>
