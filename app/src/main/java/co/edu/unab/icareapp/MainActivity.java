@@ -60,20 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
     public String calcularmbasal(){
         String resultado = null;
+        String gender = null;
         try {
+            gender = genero.getSelectedItem().toString();
             double peso_d = Double.parseDouble(peso.getText().toString());
             double altura_d = Double.parseDouble(altura.getText().toString());
             double edad_d = Double.parseDouble(edad.getText().toString());
-
-            double mbasal_mujer =( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)-161;
             double mbasal_hombre = ( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)+5;
+            double mbasal_mujer =( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)-161;
 
-            if (genero.getSelectedItem().toString() == "Masculino"){
-                resultado = "Su metabolismo basal es: "+mbasal_hombre;
-            }
-            else if(genero.getSelectedItem().toString() == "Femenino"){
-                resultado = "Su metabolismo basal es: "+mbasal_mujer;;
-        }
+            resultado = "Su metabolismo basal es: "+mbasal_hombre;
+            resultado = "Su metabolismo basal es: "+mbasal_mujer;
+
 
         }
         catch (Exception exception){
