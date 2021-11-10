@@ -33,12 +33,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        calculo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String mbasal_final = calcularmbasal();
-            }
-        });
     }
 
 
