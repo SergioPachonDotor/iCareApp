@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,31 +44,43 @@ public class MainActivity extends AppCompatActivity {
 
 
     public String calcularimc(){
-        double peso_d = Double.parseDouble(peso.getText().toString());
-        double altura_d = Double.parseDouble(altura.getText().toString());
-        double imc_d  = peso_d / altura_d * altura_d;
-        String resultado = "Su IMC es: "+imc_d;
-        return resultado;
+        try {
+            double peso_d = Double.parseDouble(peso.getText().toString());
+            double altura_d = Double.parseDouble(altura.getText().toString());
+            double imc_d  = peso_d / altura_d * altura_d;
+            String resultado = "Su IMC es: "+imc_d;
+            return resultado;
+            }
+        catch (Exception exception){
+            String message = "Por favor ingresa los datos";
+            return message;
+        }
+
     }
 
     public String calcularmbasal(){
-        double peso_d = Double.parseDouble(peso.getText().toString());
-        double altura_d = Double.parseDouble(altura.getText().toString());
-        double edad_d = Double.parseDouble(edad.getText().toString());
+        String resultado = null;
+        try {
+            double peso_d = Double.parseDouble(peso.getText().toString());
+            double altura_d = Double.parseDouble(altura.getText().toString());
+            double edad_d = Double.parseDouble(edad.getText().toString());
 
-        double mbasal_mujer =( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)-161;
-        double mbasal_hombre = ( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)+5;
+            double mbasal_mujer =( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)-161;
+            double mbasal_hombre = ( 10*peso_d)+(6.25*altura_d*100)-(5*edad_d)+5;
 
-        if (genero.getSelectedItem().toString() == "Masculino"){
-            String resultado_h = "Su metabolismo basal es: "+mbasal_hombre;
-            return resultado_h;
+            if (genero.getSelectedItem().toString() == "Masculino"){
+                resultado = "Su metabolismo basal es: "+mbasal_hombre;
+            }
+            else if(genero.getSelectedItem().toString() == "Femenino"){
+                resultado = "Su metabolismo basal es: "+mbasal_mujer;;
         }
-        else if(genero.getSelectedItem().toString() == "Femenino"){
-            String resultado_m = "Su metabolismo basal es: "+mbasal_mujer;
-            return resultado_m;
+
         }
-        String mensaje = "Algo falló";
-        return mensaje;
+        catch (Exception exception){
+            String message = "Por favor ingresa los datos";
+            return message;
+        }
+        return resultado;
     }
 
 }
