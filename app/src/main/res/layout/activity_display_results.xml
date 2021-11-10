@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DisplayResultsActivity">
-
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,6 +26,7 @@
             />
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="IMC"
@@ -39,6 +38,7 @@
             />
 
         <TextView
+            android:id="@+id/resultado_imc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="1.5"
@@ -62,6 +62,7 @@
             />
 
         <TextView
+            android:id="@+id/resultado_metabolismobasal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="2"
