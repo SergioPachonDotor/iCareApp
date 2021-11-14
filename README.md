@@ -16,3 +16,5 @@
 
 ### Link Tablero: 
 - https://trello.com/b/lkcu6fUV/lógica-de-icareapp
+
+### Conexión establecida por scrum master @eduard0x
