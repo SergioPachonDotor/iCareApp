@@ -11,7 +11,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "co.edu.unab.icareapp.MESSAGE";
+    public static final String EXTRA_MESSAGE_IMC = "1";
+    public static final String EXTRA_MESSAGE_BASAL = "2";
     EditText edad;
     EditText peso;
     EditText altura;
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
             // TextView editTextMetBas = (TextView) findViewById(R.id.resultado_metabolismobasal);
             // TextView editTextImc = (TextView) findViewById(R.id.resultado_imc);
 
-            intent.putExtra(EXTRA_MESSAGE, imc_final);
-            intent.putExtra(EXTRA_MESSAGE, mbasal_final);
+            intent.putExtra(EXTRA_MESSAGE_IMC, imc_final);
+            intent.putExtra(EXTRA_MESSAGE_BASAL, mbasal_final);
             startActivity(intent);
             }
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             double peso_d = Double.parseDouble(peso.getText().toString());
             double altura_d = Double.parseDouble(altura.getText().toString());
-            double imc_d  = peso_d / altura_d * altura_d;
+            double imc_d  = peso_d / (altura_d * altura_d);
             String resultado = "Su IMC es: "+imc_d;
             return resultado;
             }
