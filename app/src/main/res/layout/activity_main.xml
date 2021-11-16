@@ -87,4 +87,13 @@
         android:onClick="sendResults"
         android:text="Realizar Cálculo" />
 
+    <Button
+        android:id="@+id/boton_informe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:onClick="ver_informe"
+        android:text="Informe" />
+
 </LinearLayout>
